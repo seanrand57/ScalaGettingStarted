@@ -140,8 +140,19 @@ val subtractTwo = curriedSub(2)
 subtractTwo(6)
 
 
+// Variable Length Arguments
 
+// This is a pretty cool scala addition which allows you to have repeated type arguments in
+// a method signature
 
+def capitalizeAll(args: String*) = {
+  args.map { arg =>
+    arg.capitalize
+  }
+}
+
+// lets capitalize many lower case words
+capitalizeAll("sean","rand", "many","words")
 
 
 
